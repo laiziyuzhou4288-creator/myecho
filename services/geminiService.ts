@@ -1,8 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
 import { Message, TarotCard } from '../types';
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
-
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY || '' });
 const MODEL_NAME = 'gemini-3-flash-preview';
 
 // Updated logic: Narrative Therapy Guide
